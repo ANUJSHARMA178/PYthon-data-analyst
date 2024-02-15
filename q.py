@@ -1,11 +1,19 @@
 from turtle import *
+speed(0)
+def square():
+    for i in range(4):
+        forward(100)
+        right(90)
 
-pencolor('yellow')
-bgcolor('black')
-speed('fastest')
-n = 0
-while n<= 200:
-    fd(100+n)
-    rt(360/6)
-    write(n,font=('calibri',12))
-    n += 5
+def hexagon():
+    for i in range(6):
+         forward(100)
+         right(60)
+
+for i in range(6):
+    fd(100)
+    hexagon()
+    square()
+    rt(60)
+hideturtle()
+mainloop()        
