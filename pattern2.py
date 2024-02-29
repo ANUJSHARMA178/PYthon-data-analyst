@@ -12,3 +12,5 @@ polygon(5,75)
 polygon(side=6, size=50)
 polygon(7,120)
 mainloop()
+
+

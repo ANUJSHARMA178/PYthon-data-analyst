@@ -9,3 +9,6 @@ write(f' n={i}')
 
 hideturtle()
 mainloop()
+ while try 
+
+
