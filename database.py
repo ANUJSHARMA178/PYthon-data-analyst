@@ -19,6 +19,18 @@ class Message(Base):
     user_id = Column(Integer,ForeignKey("user.id"))
     message= Column(String(255))
     created_at = Column(DateTime,default=datetime.now) 
+
+def get_db():
+        engine = create_engine('sqlite:///example.db')
+        return sessionmaker(bind=engine)()
+
+def save_to_db(object):
+    db = get_db()
+    db.add(object)
+    db.commit()
+    db.close()
+
+       
     
     #create database
 if __name__ =="__main__":
